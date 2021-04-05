@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="EUC-KR">
+	<title>페이지</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous"> <!-- 부트스트랩에 대한 CSS를 cdn 형식으로 넣은 것 --> -->
+	<script type = "text/javascript" src="sumValue.js"></script>
+	<Script type = "text/javascript" src="whatTimeIsIt"></script>
+	</head>
+	<body>
+	
+	<nav class="navbar navbar-expand-lg navbar-light bg-light"> <!--  콘테이너 추가하니까 좌측에 여백 생김 -->
+	  <div class="container"> <!-- 네비게이션은 그대로 두고 안에 있는 내용만 줄어들게 됨 -->
+	    <a class="navbar-brand" href="#">Jason Koo</a>
+	    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+	      <span class="navbar-toggler-icon"></span>
+	    </button>
+	    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+	      <ul class="navbar-nav">
+	        <li class="nav-item">
+	          <a class="nav-link active" aria-current="page" href="./index.html">Home</a>
+	        </li>
+	        <li class="nav-item">
+	          <a class="nav-link" href="./bloglist.html">Blog</a>
+	        </li>
+	        <li class="nav-item">
+	          <a class="nav-link" href="./about_me.html">About</a>
+	        </li>
+	        <li class="nav-item dropdown">
+	          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+	            Dropdown link
+	          </a>
+	          <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+	            <li><a class="dropdown-item" href="#">Action</a></li>
+	            <li><a class="dropdown-item" href="#">Another action</a></li>
+	            <li><a class="dropdown-item" href="#">Something else here</a></li>
+	          </ul>
+	        </li>
+	      </ul>
+	    </div>
+	  </div>
+	</nav>
+
+	<div class = "container"> <!--  기존의 내용을 div로 감싸고 container라는 클래스로 명명 -->
+		<div class = "row">
+			<div class = "col-9"><!--왼쪽 9칸, 오른쪽 3칸이 된 것. 그리드 시스템은 12칸으로 나누어져 있음 -->
+				<h1> 첫 번째 크기 헤드라인</h1>
+				<h2> 두 번째 크기 헤드라인</h2>
+				<h3> 세 번째 크기 헤드라인</h3>
+				<h4> 네 번째 크기 헤드라인</h4>
+				<h5> 다섯 번째 크기 헤드라인</h5>
+				
+				<button onclick = "whatTimeIsIt()">현재시간</button><hr/>
+				
+				<input id = "v1" onkeyup="sumValue()"/><br/> <!-- key를 올리면, javascript 함수로 가서 sumValue를 실행시켜라!  -->
+				<input id = "v2" onkeyup="sumValue()"/><br/> 
+				<span id = "v3">0</span>
+				
+				<p> 문단은 P로 쓰세요 </p>
+				<a href="http://www.google.com">Go to Google</a>
+				<hr/>
+			</div>
+			<div class = "col-3">
+					<image src= "./image/stay_safe.jpg" class = "img-fluid w-100"> <!--  img-fluid: 강의자료 참고. 유동적인 이미지 크기 -->
+			</div>
+		</div>
+	</div> <!-- div: 콘텐츠 분할 요소: 클래스를 통해 하나의 요소를 한 묶음으로 묶어줌. 구역이나 그룹단을 만드는 콘테이너-->
+	
+	<div class="container">
+	  <div class="row">
+	  	<h2> Portfolio </h2>
+	    <div class="col-sm col-lg-6"> <!-- bg는 배경색 넣기. sm 안쓰고 col만 쓴다면 3분할로 균등하게 4칸씩 분배됨. sm은 화면 크기가 small일때 적용하는 기준-->
+	      <img src="./image/image_1.jpg" class = "img-fluid">
+	    </div>
+	    <div class="col-sm col-lg-3">
+	      <img src="./image/image_2.jpg" class = "img-fluid">
+	    </div>
+	    <div class="col-sm col-lg-3"> <!-- 화면 창 크기가 큰폭일때는 6-3-3, 스몰사이즈 일때는 4-4-4, 더 줄어들면 붙음 -->
+	      <img src="./image/image_3.jpg" class = "img-fluid">
+	    </div>
+	  </div>
+	</div>
+		
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script> <!-- 자바스크립트를 cdn 형식으로 넣은 것 -->
+	</body>
+</html>
